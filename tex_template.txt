@@ -1,0 +1,122 @@
+\documentclass[a4paper,12pt,twoside,bibliography=totoc,listof=totoc, pointlessnumbers]{scrreprt}
+\usepackage{wrapfig}
+\usepackage{subfigure} %Einfügen von zwei Bildern nebeneinander
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[babel]{csquotes}
+\addtokomafont{sectioning}{\rmfamily}
+\usepackage{acronym}
+\renewcommand*{\familydefault}{\rmdefault}
+\usepackage{hyperref}
+\usepackage[version=4]{mhchem} 
+\usepackage{amsmath}
+\usepackage{chemmacros}
+\usepackage{textgreek}
+\usepackage{epstopdf}
+\usepackage{here} 
+\usepackage{epstopdf} 
+\usepackage{paralist} 
+\usepackage{tabularx} 
+\usepackage{ragged2e}
+\usepackage[nooneline,format=plain,labelsep=colon,
+justification=justified,font=small,labelfont=bf]{caption} 
+\usepackage{booktabs} 
+\setcounter{secnumdepth}{5} 
+\setcounter{tocdepth}{5} 
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage[section]{placeins} 
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{chngcntr}
+\usepackage{pythonhighlight}
+\usepackage{listings}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage{upgreek}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
+
+\renewcommand{\thefootnote}{\alph{footnote}}
+\usepackage[backend=biber,hyperref=true,biblabel=brackets,style=chem-acs]{biblatex}
+
+\addbibresource{CHE_105_Lit.bib}
+
+\usepackage[onehalfspacing]{setspace} 
+
+\setlength{\parindent}{0pt} 
+
+\usepackage{scrlayer-scrpage}
+
+\pagestyle{scrheadings}
+
+
+
+\automark[subsection]{section}
+   \ihead{}
+   \chead{}
+   \ohead{\headmark}
+   \ofoot{\pagemark}
+
+\setheadsepline{.4pt}
+
+
+
+\begin{document}
+
+\titlehead{Universität Hamburg, <insert institut>, <insert AG>}
+\subject{Protokoll zur Forschungsarbeit im Rahmen des Moduls <insert modul>"}
+\title{<Insert nice title>}
+\subtitle{insert nice subtitle}
+\author{\textsc{Lukas Cäsar Jarren}}
+\date{2021}
+\publishers{1. Gutachter: <insert Gutachter>\\ 2. Gutachter: <insert Gutachter>}
+
+\maketitle
+
+\pagenumbering{Roman}
+
+\tableofcontents
+
+\newpage
+
+\chapter*{Abkürzungsverzeichnis}
+\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\label{sec:abkuerzungsverzeichnis}
+\begin{acronym}[Abkürzung] %in eckige Klammern die längste Abkürzung!!!
+\acro{Abkürzung}[\textbf{Abkürzung}]{\acroextra{\makebox[111mm][l]{\textbf{Beschreibung}}}}
+
+
+
+
+\end{acronym}
+
+\chapter*{Symbolverzeichnis}
+\addcontentsline{toc}{chapter}{Symbolverzeichnis}
+\label{sec:abkuerzungsverzeichnis}
+\begin{acronym}[SSSSSSSS] %in eckige Klammern die längste Abkürzung!!!
+\acro{Symbol}[\textbf{Symbol}]{\acroextra{\makebox[111mm][l]{\textbf{Beschreibung}}}\textbf{Einheit}}
+
+
+
+
+\end{acronym}
+
+\newpage
+
+\setcounter{page}{1}
+
+\pagenumbering{arabic}
+
+\chapter{Motivation}
+
+\chapter{Theoretischer Hintergrund}
+
+\chapter{Experimenteller Teil}
+
+\chapter{Ergebnisse und Diskussion}
+
+\end{document}
