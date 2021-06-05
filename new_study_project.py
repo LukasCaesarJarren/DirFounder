@@ -1,6 +1,6 @@
 import argparse
 import os
-
+from pptx import Presentation
 
 class DirFounder:
     def __init__(self, semester, module, type_of_project, spec_dirs_l=None, spec_dirs_i=None):
@@ -48,6 +48,9 @@ class DirFounder:
                             f"{self.base_dir}/{self.semester}/{self.module}/internship/protocol/Jarren_{self.module}_protocol_V1.tex",
                             "w") as file:
                         file.write(tex_template)
+                if "main_pres" in folder:
+                    prs = Presentation('/home/lukas/python_scripts_for_shell/new_study_project/pptx_template.pptx')
+                    prs.save(f"{self.base_dir}/{self.semester}/{self.module}/internship/presentations/main_pres/Jarren_{self.module}_presentation_V1.pptx")
             else:
                 target_path = os.path.join(self.base_dir, self.semester, self.module, folder)
                 os.makedirs(target_path)
