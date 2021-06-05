@@ -59,6 +59,9 @@ class DirFounder:
                             f"{self.base_dir}/{self.semester}/{self.module}/protocol/Jarren_{self.module}_protocol_V1.tex",
                             "w") as file:
                         file.write(tex_template)
+                if "main_pres" in folder:
+                    prs = Presentation('/home/lukas/python_scripts_for_shell/new_study_project/pptx_template.pptx')
+                    prs.save(f"{self.base_dir}/{self.semester}/{self.module}/presentations/main_pres/Jarren_{self.module}_presentation_V1.pptx")
 
     def main(self):
         if self.type_of_project == "L":
